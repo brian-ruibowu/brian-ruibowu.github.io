@@ -43,6 +43,7 @@
     <div class="content">
         <h2>Part 1.1: Finite Difference Operator</h2>
         <p>To compute the gradient magnitude of an image, we first calculate the partial derivatives in both the horizontal and vertical directions using finite difference kernels. Specifically, we use a kernel like [1, -1] to find differences between adjacent pixels horizontally (dx), and a kernel like [[1], [-1]] for vertical differences (dy). By convolving these kernels with the image, we obtain the gradients along each axis. The gradient magnitude at each pixel is then computed by combining these partial derivatives using the Euclidean norm: sqrt(dx² + dy²). This results in a single image where the intensity of each pixel represents the strength of the gradient at that point, effectively highlighting edges and areas with significant intensity changes.</p>
+        <img src="./part1_1.png" alt="proj2_part1_1">
         <!-- You can add more content here -->
     </div>
 </body>
