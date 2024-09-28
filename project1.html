@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 1: Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: calc(33.333% - 10px);
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        header, nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1: Image Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="project2.html">Project 2</a>
+    </nav>
+
+    <div class="image-gallery">
+        <img src="./melons.jpg" alt="Melons">
+        <img src="./harvestors.jpg" alt="Harvestors">
+        <img src="./icon.jpg" alt="Icon">
+        <img src="./lady.jpg" alt="Lady">
+        <img src="./self_portrait.jpg" alt="Self Portrait">
+        <img src="./onion_church.jpg" alt="Onion Church">
+        <img src="./three_generations.jpg" alt="Three Generations">
+        <img src="./train.jpg" alt="Train">
+        <img src="./emir.jpg" alt="Emir">
+        <img src="./monastery.jpg" alt="Monastery">
+        <img src="./tobolsk.jpg" alt="Tobolsk">
+        <img src="./cathedral.jpg" alt="Cathedral">
+    </div>
+</body>
+</html>
