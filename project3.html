@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 3: Face Morphing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
+        header, nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Optional styling for content */
+        .content img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 2: Finite Difference Operator</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="project1.html">Project 1</a>
+    </nav>
+
+    <div class="content">
+        <h2>Part 1: Defining Correspondences</h2>
+        <p>To compute the gradient magnitude of an image, we first calculate the partial derivatives in both the horizontal and vertical directions using finite difference kernels. Specifically, we use a kernel like [1, -1] to find differences between adjacent pixels horizontally (dx), and a kernel like [[1], [-1]] for vertical differences (dy). By convolving these kernels with the image, we obtain the gradients along each axis. The gradient magnitude at each pixel is then computed by combining these partial derivatives using the Euclidean norm: sqrt(dx² + dy²). This results in a single image where the intensity of each pixel represents the strength of the gradient at that point, effectively highlighting edges and areas with significant intensity changes.</p>
+        <img src="./project3_part1.png" alt="proj2_part1_1">
+        <h2>Part 2: Computing the "Mid-way Face"</h2>
+        <p>The sharpened image recovers some of the lost details from the blurred image. Edges and textures become more pronounced. Over-amplification of high-frequency components can introduce artifacts and noise, especially in areas with subtle gradients.</p>
+        <img src="./project3_part2.png" alt="proj2_taj">
+        <img src="./part2_1_eagle.png" alt="proj2_eagle">
+        <h2>Part 3: The Morph Sequence</h2>
+        <h2>Part 4: The "Mean face" of a population</h2>
+        <img src="./part2_3.jpg" alt="proj2_apple">
+        <h2>Part 5: Caricatures: Extrapolating from the mean</h2>
+        <h2>Part 6: Bells and Whistles</h2>
+        
+        
+        
+        
+        <!-- You can add more content here -->
+    </div>
+</body>
+</html>
