@@ -56,12 +56,12 @@
 
     <div class="content">
         <h2>Part 1: Defining Correspondences</h2>
-        <p>To compute the gradient magnitude of an image, we first calculate the partial derivatives in both the horizontal and vertical directions using finite difference kernels. Specifically, we use a kernel like [1, -1] to find differences between adjacent pixels horizontally (dx), and a kernel like [[1], [-1]] for vertical differences (dy). By convolving these kernels with the image, we obtain the gradients along each axis. The gradient magnitude at each pixel is then computed by combining these partial derivatives using the Euclidean norm: sqrt(dx² + dy²). This results in a single image where the intensity of each pixel represents the strength of the gradient at that point, effectively highlighting edges and areas with significant intensity changes.</p>
+        <p>I started by cropping and resizing images of myself and a celebrity to the same dimensions, ensuring our faces had similar sizes and aspect ratios. Using an online tool, I selected 54 correspondence points on each image, focusing on key facial features, and added the four corners to include every pixel within a triangle, totaling 58 points per image. Finally, I computed the mean of these points to generate a Delaunay triangulation, which will facilitate the morphing process between the two faces.</p>
         <div class="image-container">
             <img src="./project3_part1.png" alt="proj2_part1_1">
         </div>
         <h2>Part 2: Computing the "Mid-way Face"</h2>
-        <p>The sharpened image recovers some of the lost details from the blurred image. Edges and textures become more pronounced. Over-amplification of high-frequency components can introduce artifacts and noise, especially in areas with subtle gradients.</p>
+        <p>To compute the mid-way face between me and Angela, I first calculated the average shape by averaging the correspondence points from both images: avg_shape = ½ (im1_pts + im2_pts). Then, for each triangle in the Delaunay triangulation of the average shape, I calculated the inverse affine transformation matrices mapping the triangles from the average shape back to the original triangles in each image. Using these matrices, I performed inverse warping on both images, applying polygon masks to accurately map the pixels within each triangle. Finally, I cross-dissolved the two warped images by averaging their pixel values to create the mid-way face.</p>
         <div class="image-container">
             <img src="./project3_part2.png" alt="proj2_taj">
         </div>
@@ -70,6 +70,7 @@
             <img src="./project3_part3.gif" alt="proj2_eagle" class="gif-image">
         </div>
         <h2>Part 4: The "Mean face" of a population</h2>
+        <p>In Part 3, I computed the average face from multiple images using the Danes dataset, which consists of 37 images of Danish individuals (30 male and 7 female). I began by parsing the dataset's .asf files to extract the correspondence keypoints for each image. By averaging all these keypoints, I obtained the average shape. Then, I warped each face in the dataset to this average shape, aligning all faces uniformly. This process allowed me to generate the average face by blending the warped images together.</p>
         <div class="image-container">
             <img src="./project3_part4_1.png" alt="proj2_part1_1">
         </div>
@@ -86,7 +87,7 @@
         <div class="image-container">
             <img src="./project3_part5.png" alt="proj2_part1_1">
         </div>
-        <h2>Part 6: Bells and Whistles</h2>
+        <h2>Part 6: Bells and Whistles -- Change Gender</h2>
         <div class="image-container">
             <img src="./project3_part6.png" alt="proj2_part1_1">
         </div>
