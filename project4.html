@@ -56,6 +56,14 @@
             height: auto;
             margin: 0 auto;
         }
+
+         .full-width-image-center img {
+            width: 50%; /* Each image takes 50% of the available width */
+            height: auto;
+            display: block; /* Ensures margin auto works correctly on images */
+            margin: 0 auto; /* Horizontally centers the image */
+        }
+
     </style>
 </head>
 <body>
@@ -94,6 +102,15 @@
             <img src="./homographies_3.png" alt="proj2_part1_1">
         </div>
         <h2>Part 3: Warp the Images</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_1.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_2.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_3.png" alt="proj2_part1_1">
+        </div>
         <h2>Part 4: Image Rectification</h2>
         <h2>Part 5: Blend the images into a mosaic</h2>
     </div>
