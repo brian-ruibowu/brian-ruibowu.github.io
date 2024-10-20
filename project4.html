@@ -58,45 +58,21 @@
         <h2>Part 1: Defining Correspondences</h2>
         <p>I started by cropping and resizing images of myself and a celebrity to the same dimensions, ensuring our faces had similar sizes and aspect ratios. Using an online tool, I selected 54 correspondence points on each image, focusing on key facial features, and added the four corners to include every pixel within a triangle, totaling 58 points per image. Finally, I computed the mean of these points to generate a Delaunay triangulation, which will facilitate the morphing process between the two faces.</p>
         <div class="image-container">
-            <img src="./project3_part1.png" alt="proj2_part1_1">
-        </div>
-        <h2>Part 2: Computing the "Mid-way Face"</h2>
-        <p>To compute the mid-way face between me and Angela, I first calculated the average shape by averaging the correspondence points from both images: avg_shape = ½ (im1_pts + im2_pts). Then, for each triangle in the Delaunay triangulation of the average shape, I calculated the inverse affine transformation matrices mapping the triangles from the average shape back to the original triangles in each image. Using these matrices, I performed inverse warping on both images, applying polygon masks to accurately map the pixels within each triangle. Finally, I cross-dissolved the two warped images by averaging their pixel values to create the mid-way face.</p>
-        <div class="image-container">
-            <img src="./project3_part2.png" alt="proj2_taj">
-        </div>
-        <h2>Part 3: The Morph Sequence</h2>
-        <div class="image-container">
-            <img src="./project3_part3.gif" alt="proj2_eagle" class="gif-image">
-        </div>
-        <h2>Part 4: The "Mean face" of a population</h2>
-        <p>In Part 3, I computed the average face from multiple images using the Danes dataset, which consists of 37 images of Danish individuals (30 male and 7 female). I began by parsing the dataset's .asf files to extract the correspondence keypoints for each image. By averaging all these keypoints, I obtained the average shape. Then, I warped each face in the dataset to this average shape, aligning all faces uniformly. This process allowed me to generate the average face by blending the warped images together.</p>
-        <h3>Part 4: The "Mean face" of a population -- the Mean Face</h3>
-        <div class="image-container">
-            <img src="./avg_face.png" alt="proj2_part1_1">
-        </div>
-        <h3>Part 4: The "Mean face" of a population -- Some Examples</h3>
-        <div class="image-container">
-            <img src="./project3_part4_1.png" alt="proj2_part1_1">
+            <img src="./proj4_1_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_1_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_1_3.JPG" alt="proj2_part1_1">
         </div>
         <div class="image-container">
-            <img src="./project3_part4_2.png" alt="proj2_part1_1">
+            <img src="./proj4_2_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_2_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_2_3.JPG" alt="proj2_part1_1">
         </div>
         <div class="image-container">
-            <img src="./project3_part4_3.png" alt="proj2_part1_1">
+            <img src="./proj4_3_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_3_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_3_3.JPG" alt="proj2_part1_1">
         </div>
-        <h3>Part 4: The "Mean face" of a population -- My Face</h3>
-        <div class="image-container">
-            <img src="./project3_part4_4.png" alt="proj2_part1_1">
-        </div>
-        <h2>Part 5: Caricatures: Extrapolating from the mean</h2>
-        <div class="image-container">
-            <img src="./project3_part5.png" alt="proj2_part1_1">
-        </div>
-        <h2>Part 6: Bells and Whistles -- Change Gender</h2>
-        <div class="image-container">
-            <img src="./project3_part6.png" alt="proj2_part1_1">
-        </div>
+        
     </div>
 </body>
 </html>
