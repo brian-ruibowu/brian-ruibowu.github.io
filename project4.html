@@ -36,11 +36,18 @@
             height: auto; /* Maintain aspect ratio */
         }
 
-        /* Centering all images */
+        /* Centering all images in a row of 3 */
         .image-container {
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Setting image size to take up 1/3 of the row */
+        .image-container img {
+            width: calc(33.33% - 20px); /* Each image takes up 1/3 of the width with spacing */
+            height: auto;
         }
     </style>
 </head>
@@ -61,18 +68,13 @@
             <img src="./proj4_1_1.JPG" alt="proj2_part1_1">
             <img src="./proj4_1_2.JPG" alt="proj2_part1_1">
             <img src="./proj4_1_3.JPG" alt="proj2_part1_1">
-        </div>
-        <div class="image-container">
             <img src="./proj4_2_1.JPG" alt="proj2_part1_1">
             <img src="./proj4_2_2.JPG" alt="proj2_part1_1">
             <img src="./proj4_2_3.JPG" alt="proj2_part1_1">
-        </div>
-        <div class="image-container">
             <img src="./proj4_3_1.JPG" alt="proj2_part1_1">
             <img src="./proj4_3_2.JPG" alt="proj2_part1_1">
             <img src="./proj4_3_3.JPG" alt="proj2_part1_1">
         </div>
-        
     </div>
 </body>
 </html>
