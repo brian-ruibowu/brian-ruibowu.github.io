@@ -49,6 +49,13 @@
             width: calc(33.33% - 20px); /* Each image takes up 1/3 of the width with spacing */
             height: auto;
         }
+
+        /* Make the last three images take up full screen width */
+        .full-width-image img {
+            width: 100%; /* Each image takes the full width */
+            height: auto;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -76,15 +83,17 @@
             <img src="./proj4_3_2.JPG" alt="proj2_part1_1">
             <img src="./proj4_3_3.JPG" alt="proj2_part1_1">
         </div>
-        <div class="image-container">
-            <img src="./homographies_1.png" alt="proj2_part1_1">
+        <!-- Full width images below -->
+        <div class="full-width-image">
+            <img src="./homographics_1.png" alt="proj2_part1_1">
         </div>
-        <div class="image-container">
+        <div class="full-width-image">
             <img src="./homographies_2.png" alt="proj2_part1_1">
         </div>
-        <div class="image-container">
+        <div class="full-width-image">
             <img src="./homographies_3.png" alt="proj2_part1_1">
         </div>
     </div>
 </body>
 </html>
+
