@@ -64,6 +64,18 @@
             margin: 0 auto 20px; /* Horizontally centers the image */
         }
 
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto; /* Center the row on the screen */
+        }
+
+        .image-row img {
+            width: 49%; /* Each image will take up nearly half the width of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
     </style>
 </head>
 <body>
@@ -79,6 +91,7 @@
     </nav>
 
     <div class="content">
+         <h2>Part A</h2>
         <h2>Part 1: Shoot the Pictures</h2>
         <div class="image-container">
             <img src="./proj4_1_1.JPG" alt="proj2_part1_1">
@@ -128,6 +141,41 @@
         <div class="full-width-image-center">
             <img src="./blended_mosaic_33.jpg" alt="proj4">
         </div>
+        <h2>Part B</h2>
+        <h2>Part 6: Detecting Corner Features</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_corner_features.jpeg" alt="proj4">
+        </div>
+        <h2>Part 7: ANMS</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_anms.jpeg" alt="proj4">
+        </div>
+        <h2>Part 8: Extracting a Feature Descriptor</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_64_descriptors.jpeg" alt="proj4">
+        </div>
+        <h2>Part 9: Matching Descriptor</h2>
+        <div class="full-width-image-center">
+            <img src="./feature_match_10.jpeg" alt="proj4">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./feature_match_08.jpeg" alt="proj4">
+        </div>
+       <h2>Part 10: Three Mosaics</h2>
+
+        <div class="image-row">
+            <img src="./blended_mosaic.jpg" alt="proj4">
+            <img src="./blended_mosaic.jpg" alt="proj4">
+        </div>
+        <div class="image-row">
+            <img src="./blended_mosaic_2.jpg" alt="proj4">
+            <img src="./blended_mosaic_2.jpg" alt="proj4">
+        </div>
+        <div class="image-row">
+            <img src="./blended_mosaic_33.jpg" alt="proj4">
+            <img src="./blended_mosaic_33.jpg" alt="proj4">
+        </div>
+        
     </div>
 </body>
 </html>
