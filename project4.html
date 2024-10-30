@@ -64,16 +64,21 @@
             margin: 0 auto 20px; /* Horizontally centers the image */
         }
 
-        .image-row {
+       .image-row {
             display: flex;
             justify-content: space-between;
             width: 90%;
             margin: 0 auto; /* Center the row on the screen */
         }
-
+        
         .image-row img {
             width: 49%; /* Each image will take up nearly half the width of the container */
             height: auto; /* Maintain aspect ratio */
+        }
+        
+        .rotated img {
+            transform: rotate(-90deg); /* Rotate images counterclockwise by 90 degrees */
+            transform-origin: center; /* Set the rotation point to the center of the image */
         }
 
     </style>
@@ -167,14 +172,13 @@
             <img src="./blended_mosaic.jpg" alt="proj4">
             <img src="./blended_mosaic.jpg" alt="proj4">
         </div>
-        <div class="image-row">
+        <div class="image-row rotated">
             <img src="./blended_mosaic_2.jpg" alt="proj4">
             <img src="./blended_mosaic_2.jpg" alt="proj4">
         </div>
-        <div class="image-row">
+        <div class="image-row rotated">
             <img src="./blended_mosaic_33.jpg" alt="proj4">
             <img src="./blended_mosaic_33.jpg" alt="proj4">
-        </div>
         
     </div>
 </body>
