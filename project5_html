@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 4: FEATURE MATCHING for AUTOSTITCHING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header, nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Optional styling for content */
+        .content img {
+            max-width: 100%;
+            display: block;
+            margin: 20px 0;
+        }
+
+        /* Styling for the GIF specifically */
+        .gif-image {
+            width: 33.33vw; /* Set the width to 1/3 of the viewport width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Centering all images in a row of 3 */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Setting image size to take up 1/3 of the row */
+        .image-container img {
+            width: calc(33.33% - 20px); /* Each image takes up 1/3 of the width with spacing */
+            height: auto;
+        }
+
+        /* Make the last three images take up full screen width */
+        .full-width-image img {
+            width: 100%; /* Each image takes the full width */
+            height: auto;
+            margin: 0 auto;
+        }
+
+         .full-width-image-center img {
+            width: 50%; /* Each image takes 50% of the available width */
+            height: auto;
+            display: block; /* Ensures margin auto works correctly on images */
+            margin: 0 auto 20px; /* Horizontally centers the image */
+        }
+
+       .image-row {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto; /* Center the row on the screen */
+        }
+        
+        .image-row img {
+            width: 49%; /* Each image will take up nearly half the width of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        .rotated img {
+            transform: rotate(-90deg); /* Rotate images counterclockwise by 90 degrees */
+            transform-origin: center; /* Set the rotation point to the center of the image */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 4: Stitching Photo Mosaics</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="project1.html">Project 1</a>
+        <a href="project2.html">Project 2</a>
+        <a href="project3.html">Project 3</a>
+    </nav>
+
+    <div class="content">
+        <h2>Part A</h2>
+        <h2>Part 1: Shoot the Pictures</h2>
+        <div class="image-container">
+            <img src="./proj4_1_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_1_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_1_3.JPG" alt="proj2_part1_1">
+            <img src="./proj4_2_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_2_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_2_3.JPG" alt="proj2_part1_1">
+            <img src="./proj4_3_1.JPG" alt="proj2_part1_1">
+            <img src="./proj4_3_2.JPG" alt="proj2_part1_1">
+            <img src="./proj4_3_3.JPG" alt="proj2_part1_1">
+        </div>
+        <h2>Part 2: Recovering Homographies</h2>
+        <div class="full-width-image">
+            <img src="./homographics_1.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image">
+            <img src="./homographies_2.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image">
+            <img src="./homographies_3.png" alt="proj2_part1_1">
+        </div>
+        <h2>Part 3: Warp the Images</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_1.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_2.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./proj4_warp_3.png" alt="proj2_part1_1">
+        </div>
+        <h2>Part 4: Image Rectification</h2>
+        <div class="full-width-image-center">
+            <img src="./rectification_1_1.png" alt="proj2_part1_1">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./rectification_2_1.png" alt="proj2_part1_1">
+        </div>
+        <h2>Part 5: Blend the images into a mosaic</h2>
+        <div class="full-width-image-center">
+            <img src="./blended_mosaic.jpg" alt="proj4">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./blended_mosaic_2.jpg" alt="proj4">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./blended_mosaic_33.jpg" alt="proj4">
+        </div>
+        
+        <h2>Part B</h2>
+        <h2>Part 6: Detecting Corner Features</h2>
+        <div class="full-width-image-center">
+            <img src="./proj4_corner_features.jpeg" alt="proj4">
+        </div>
+        <h2>Part 7: ANMS</h2>
+        <p>After detecting the corners, I implemented Adaptive Non-Maximal Suppression (ANMS) to select a subset of the most prominent corner features. ANMS helps retain spatially well-distributed keypoints by suppressing weaker ones that are close to stronger ones. This process ensures that our selected corners are not only strong but also cover the image evenly. The results of ANMS are shown in the figure below, where the chosen corners are overlaid on the image.</p>
+        <div class="full-width-image-center">
+            <img src="./proj4_anms.jpeg" alt="proj4">
+        </div>
+        <h2>Part 8: Extracting a Feature Descriptor</h2>
+        <p>Next, I extracted feature descriptors for each keypoint. Following the approach from the paper, I sampled 8x8 patches from a larger 40x40 window around each keypoint to capture more context. These patches were then bias and gain normalized to ensure that they are invariant to illumination changes. The result is a set of feature vectors that describe the local image structure around each keypoint. The figure below shows a visualization of the feature descriptors extracted from the image.</p>
+        <div class="full-width-image-center">
+            <img src="./proj4_64_descriptors.jpeg" alt="proj4">
+        </div>
+        <h2>Part 9: Matching Descriptor</h2>
+        <div class="full-width-image-center">
+            <img src="./feature_match_10.jpeg" alt="proj4">
+        </div>
+        <div class="full-width-image-center">
+            <img src="./feature_match_08.jpeg" alt="proj4">
+        </div>
+        <h2>Part 10: Three Mosaics</h2>
+        <p>Finally, I used a robust method (RANSAC) to compute a homography between the matched features of the two images. The homography allows us to align the images and create a mosaic. I produced three different mosaics: one manually stitched and two automatically stitched using the described method. The resulting mosaics are displayed below.</p>
+        <div class="image-row">
+            <img src="./blended_mosaic.jpg" alt="proj4">
+            <img src="./blended_mosaic.jpg" alt="proj4">
+        </div>
+        <div class="image-row rotated">
+            <img src="./blended_mosaic_2.jpg" alt="proj4">
+            <img src="./blended_mosaic_2.jpg" alt="proj4">
+        </div>
+        <div class="image-row rotated">
+            <img src="./blended_mosaic_33.jpg" alt="proj4">
+            <img src="./blended_mosaic_33.jpg" alt="proj4">
+        </div>
+
+    </div>
+</body>
+</html>
