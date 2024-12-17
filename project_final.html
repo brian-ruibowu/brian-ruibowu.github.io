@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Deliverables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        header, section {
+            margin-bottom: 30px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        img {
+            max-width: 90%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project Deliverables</h1>
+    </header>
+
+    <section>
+        <h2>Deliverable 1: Pixel Value vs. Log Exposure</h2>
+        <p>This figure shows the relationship between pixel values (Z) and the corresponding log exposure (X). It is derived from the camera response function estimation step.</p>
+        <img src="deliverable_1.png" alt="Pixel value Z vs. log exposure X">
+        <div class="caption">Figure 1: Pixel values mapped against their log exposures.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Deliverable 2: HDR Radiance Map</h2>
+        <p>This image represents the constructed High Dynamic Range radiance map derived from multiple low dynamic range exposures. It combines information from multiple images to recover the scene's true radiance values.</p>
+        <img src="deliverable_2.png" alt="HDR Radiance Map">
+        <div class="caption">Figure 2: HDR radiance map visualization.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Deliverable 3: Global Scale and Bilateral Filtered Image</h2>
+        <p>Here we show the effect of simple global scaling applied to the HDR image and the result after applying a bilateral filter to separate the image into base and detail layers.</p>
+        <img src="deliverable_3.png" alt="Global scale and bilateral filtered result">
+        <div class="caption">Figure 3: Globally scaled and bilateral filtered representation.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Deliverable 4: After Tone Mapping</h2>
+        <p>This image shows the result after applying a tone mapping operator to the HDR image, compressing its dynamic range into a visually pleasing format suitable for display on standard monitors.</p>
+        <img src="deliverable_4.png" alt="After Tone Mapping">
+        <div class="caption">Figure 4: HDR image after tone mapping.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Deliverable 5: Durand Tone Mapping Result</h2>
+        <p>This image demonstrates the locally-based tone mapping approach following Durand (2002). Using bilateral filtering and dynamic range compression, it preserves details and achieves a more balanced appearance across the scene.</p>
+        <img src="deliverable_5.png" alt="Durand Tone Mapping Result">
+        <div class="caption">Figure 5: Durand tone mapping output.</div>
+    </section>
+
+</body>
+</html>
